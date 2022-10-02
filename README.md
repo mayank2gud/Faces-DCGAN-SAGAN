@@ -36,7 +36,7 @@ Architecture guidelines for stable Deep Convolutional GANs:
 <li>Use LeakyReLU activation in the discriminator for all layers.
 
 </ul>
-![plot](./images/dcgan generator.png)
+![plot](./images/dcgangenerator.png)
 
 ### Results
 

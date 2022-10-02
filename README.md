@@ -36,7 +36,28 @@ Architecture guidelines for stable Deep Convolutional GANs:
 <li>Use LeakyReLU activation in the discriminator for all layers.
 
 </ul>
+![plot]("./images/dcgan generator.png")
+### Results
+![plot](./images/fake_epoch10.png)
+![plot](./images/fake_epoch20.png)
+![plot](./images/fake_epoch30.png)
+<br>
 
 
+## Self Attention GAN
 
+Self-Attention Generative Adversarial Network (SAGAN) allows attention-driven, long-range dependency modeling for image generation tasks. Traditional convolutional GANs generate high-resolution
+details as a function of only spatially local points in lower-resolution feature maps. In SAGAN, details
+can be generated using cues from all feature locations. Moreover, the discriminator can check that
+highly detailed features in distant portions of the image are consistent with each other. Furthermore,
+recent work has shown that generator conditioning affects GAN performance. Therefore, we apply
+spectral normalization to the GAN generator and find that this improves training dynamics.
+Though DCGANs have significantly improved the training stability of GANs, using convolutional
+layers alone is computationally inefficient for long-range modeling dependencies in images. Adding
+self-attention to the GANs enables the generator and the discriminator to efficiently model relationships between widely separated spatial regions. <br>
+
+### Results
+![plot](./images/2_1.png)
+![plot](./images/2_12.png)
+![plot](./images/2_3.png)
 
